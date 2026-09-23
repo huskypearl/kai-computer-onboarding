@@ -18,10 +18,13 @@ Do these steps in order, confirming each before moving on. Only stop to ask me i
    (Settings → Plugins → Computer Use → Install, then restart if needed).
    Set this thread to model gpt-6-astra, Fast mode, reasoning Extra High.
 
-2. Install the Kai Computer app:
-   - Download the Windows installer from https://mlabs.life/kai  (password: ask Joe).
-   - Run the installer, then launch "Kai Computer" once. On first launch it enrolls with the
-     Kai broker and writes a toolkit to your home folder at  %USERPROFILE%\kai-service .
+2. Install the Kai Computer app (Windows):
+   - Download the latest zip from this repo's Releases:
+     https://github.com/huskypearl/kai-computer-onboarding/releases/latest
+   - Unzip it, then run "Kai Computer.exe" (Windows may warn about an unknown publisher — choose
+     "More info" → "Run anyway"). On first launch it enrolls with the Kai broker and writes a
+     toolkit to your home folder at  %USERPROFILE%\kai-service .
+   - (Signed installer via https://mlabs.life/kai is coming once CI publishing is re-enabled.)
 
 3. Clone this onboarding repo (so you can pull updates and suggest changes):
    git clone https://github.com/huskypearl/kai-computer-onboarding
