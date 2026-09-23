@@ -12,36 +12,38 @@ everything and checks each step.
 
 ```text
 You are helping me set up "Kai Computer" for remote IT support on THIS Windows PC.
-Do these steps in order, confirming each before moving on. Only stop to ask me if a step truly fails.
+Do these steps in order, confirm each with the check shown, and only stop if a step truly fails.
 
-1. Make sure the Codex "Computer Use" plugin is installed and enabled
-   (Settings → Plugins → Computer Use → Install, then restart if needed).
-   Set this thread to model gpt-6-astra, Fast mode, reasoning Extra High.
+1. Prerequisites (install silently with winget if missing, then verify):
+   - Node.js LTS:  winget install OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements
+   - Codex CLI:    npm install -g @openai/codex
+   Verify:  node -v   and   codex --version   both print a version.
 
-2. Install the Kai Computer app (Windows):
-   - Download the latest zip from this repo's Releases:
+2. Codex computer use + model:
+   - In the Codex desktop app: Settings → Plugins → Computer Use → Install, then restart and sign in.
+   - This thread must run model gpt-6-astra, Fast mode, reasoning Extra High.
+
+3. Install the Kai Computer app:
+   - Download the latest zip from Releases:
      https://github.com/huskypearl/kai-computer-onboarding/releases/latest
-   - Unzip it, then run "Kai Computer.exe" (Windows may warn about an unknown publisher — choose
-     "More info" → "Run anyway"). On first launch it enrolls with the Kai broker and writes a
-     toolkit to your home folder at  %USERPROFILE%\kai-service .
-   - (Signed installer via https://mlabs.life/kai is coming once CI publishing is re-enabled.)
+   - Unzip it and run "Kai Computer.exe" (if SmartScreen warns: More info → Run anyway).
+   - On first launch it enrolls with the Kai broker and writes a toolkit to  %USERPROFILE%\kai-service .
 
-3. Clone this onboarding repo (so you can pull updates and suggest changes):
-   git clone https://github.com/huskypearl/kai-computer-onboarding
-
-4. Set the name that signs your support emails. Add this line to the file
-   %USERPROFILE%\.kai-computer-retain\.env.local  (create it if needed):
+4. Sign your support emails. Create/append this file:  %USERPROFILE%\.kai-computer-retain\.env.local
        KAI_TECH_NAME=Steve Hamrell
-   (Also add  KAI_TECH_ID=steve  so your ScreenConnect sessions are tagged to your account.)
-   Restart the Kai Computer app afterward.
+       KAI_TECH_ID=steve
+   Then restart the Kai Computer app.
 
-5. Verify the toolkit is connected. In a terminal:
+5. Verify the toolkit is connected:
    cd %USERPROFILE%\kai-service
    node kai-session.mjs list
    It should print connected ScreenConnect sessions with no error.
 
-6. You're ready. Tell me you're done and I'll summarize how to run a support session.
+6. Done. Tell me you're ready and I'll summarize how to run a support session.
 ```
+
+> Clone this repo too if you want to pull updates or suggest changes:
+> `git clone https://github.com/huskypearl/kai-computer-onboarding`
 
 ## Running a support session (day to day)
 
