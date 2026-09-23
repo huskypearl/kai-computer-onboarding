@@ -26,12 +26,18 @@ Do these steps in order, confirming each before moving on. Only stop to ask me i
 3. Clone this onboarding repo (so you can pull updates and suggest changes):
    git clone https://github.com/huskypearl/kai-computer-onboarding
 
-4. Verify the toolkit is connected. In a terminal:
+4. Set the name that signs your support emails. Add this line to the file
+   %USERPROFILE%\.kai-computer-retain\.env.local  (create it if needed):
+       KAI_TECH_NAME=Steve Hamrell
+   (Also add  KAI_TECH_ID=steve  so your ScreenConnect sessions are tagged to your account.)
+   Restart the Kai Computer app afterward.
+
+5. Verify the toolkit is connected. In a terminal:
    cd %USERPROFILE%\kai-service
    node kai-session.mjs list
    It should print connected ScreenConnect sessions with no error.
 
-5. You're ready. Tell me you're done and I'll summarize how to run a support session.
+6. You're ready. Tell me you're done and I'll summarize how to run a support session.
 ```
 
 ## Running a support session (day to day)
