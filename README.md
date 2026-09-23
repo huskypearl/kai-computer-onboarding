@@ -45,6 +45,16 @@ Do these steps in order, confirm each with the check shown, and only stop if a s
 > Clone this repo too if you want to pull updates or suggest changes:
 > `git clone https://github.com/huskypearl/kai-computer-onboarding`
 
+## Before your first session: sign into ScreenConnect
+
+Kai creates sessions and runs the hidden terminal through a built-in broker (no login needed for
+that). But **opening the remote viewer** loads the ScreenConnect web console, which needs you signed
+in. Do this once, first:
+
+1. Go to **https://justanswer.screenconnect.com** and sign in with the account provided to you.
+2. Leave that signed in. Now "Open remote viewer" in Kai will show the customer's screen instead of a
+   login page.
+
 ## Running a support session (day to day)
 
 1. Open **Kai Computer**.
