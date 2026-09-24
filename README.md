@@ -23,11 +23,12 @@ Do these steps in order, confirm each with the check shown, and only stop if a s
    - In the Codex desktop app: Settings → Plugins → Computer Use → Install, then restart and sign in.
    - This thread must run model gpt-6-astra, Fast mode, reasoning Extra High.
 
-3. Install the Kai Computer app:
-   - Download the latest zip from Releases:
+3. Install the Kai Computer app (one click):
+   - Download Kai-Computer-Setup.exe from the latest release:
      https://github.com/huskypearl/kai-computer-onboarding/releases/latest
-   - Unzip it and run "Kai Computer.exe" (if SmartScreen warns: More info → Run anyway).
-   - On first launch it enrolls with the Kai broker and writes a toolkit to  %USERPROFILE%\kai-service .
+   - Double-click it (if SmartScreen warns: More info → Run anyway). It installs and adds a
+     Start-menu shortcut for "Kai Computer".
+   - Launch it once. It enrolls with the Kai broker and writes a toolkit to  %USERPROFILE%\kai-service .
 
 4. Sign your support emails. Create/append this file:  %USERPROFILE%\.kai-computer-retain\.env.local
        KAI_TECH_NAME=Steve Hamrell
